@@ -23,3 +23,28 @@
   section {
     height: 100vh;
   }
+
+  .arrow-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .arrow-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s, scale 0.3s;
+  }
+  
+  .arrow-button:hover .arrow-icon {
+    transform: translateY(5px) scale(1.05)
+  }
+  
+  .arrow-button:focus {
+    outline: none;
+  }
