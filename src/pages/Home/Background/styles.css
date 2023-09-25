@@ -1,22 +1,27 @@
 .background-section {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 2rem 0;
+    justify-content: space-evenly;
+    padding: 2rem;
 }
 
 .background-image-container {
     flex: 1;
-    padding: 2rem; /* Spacing between image and content */
+    padding: 50px;
 }
 
 .background-image {
-    max-width: 100%;
-    border-radius: 10px; /* Optional, to give the image rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional, to give the image a soft shadow */
+    max-width: 75%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
 }
 
-.background-content {
+.background-content  {
     flex: 1;
-    padding-left: 1rem; /* Spacing between content and image */
+    padding-right: 1rem;
+    max-width: 60%;
+}
+
+.background-content p, h3 {    
+    text-align: left;
 }
