@@ -1,12 +1,12 @@
 import React, { forwardRef } from "react";
 import "./styles.css";
-import ScrollDownIcon from "../ScrollDownIcon";
+import BackToTopIcon from "../../../components/BackToTopIcon";
 
 interface ContactProps {
   scrollTo: () => void;
 }
 
-const Contact = forwardRef<HTMLDivElement, ContactProps> (( props, ref ) => {
+const Contact = forwardRef<HTMLDivElement, ContactProps>((props, ref) => {
   return (
     <section ref={ref} className="contact-section">
       <h2>Contact Me</h2>
@@ -22,7 +22,7 @@ const Contact = forwardRef<HTMLDivElement, ContactProps> (( props, ref ) => {
         </a>
         .
       </p>
-      <ScrollDownIcon scrollTo ={props.scrollTo} />
+      <BackToTopIcon scrollTo={props.scrollTo} />
     </section>
   );
 });
