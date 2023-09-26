@@ -1,9 +1,14 @@
-import React from 'react';
-import './styles.css';
+import React, { forwardRef } from "react";
+import "./styles.css";
+import ScrollDownIcon from "../../../components/ScrollDownIcon";
 
-const Skills: React.FC = () => {
+interface SkillsProps {
+  scrollTo: () => void;
+}
+
+const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
   return (
-    <section className="skills-section">
+    <section ref={ref} className="skills-section">
       <h2>My Skills</h2>
       <ul>
         <li>JavaScript</li>
@@ -12,8 +17,9 @@ const Skills: React.FC = () => {
         <li>Node.js</li>
         {/* ... add other skills as needed */}
       </ul>
+      <ScrollDownIcon scrollTo={props.scrollTo} />
     </section>
   );
-};
+});
 
 export default Skills;

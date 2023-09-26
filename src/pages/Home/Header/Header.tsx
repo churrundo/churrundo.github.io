@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import ScrollDownIcon from "../../../components/ScrollDownIcon";
 
 interface HeaderProps {
   scrollTo: () => void;
@@ -15,13 +16,7 @@ const Header: React.FC<HeaderProps> = ({ scrollTo }) => {
           Full-Stack Web Developer | Intuition Driver | Perpetually Curious
         </p>
       </div>
-      <button className="arrow-button" onClick={scrollTo}>
-        <img
-          src="/icons/arrow-square-down-f.svg"
-          alt="Scroll down"
-          className="arrow-icon"
-        />
-      </button>
+      <ScrollDownIcon scrollTo={scrollTo} />
     </header>
   );
 };
