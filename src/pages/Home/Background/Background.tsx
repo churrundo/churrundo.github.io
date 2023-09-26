@@ -13,7 +13,7 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>((props, ref) => {
         <img
           src="./IMG_20230705_230300_255.jpg"
           alt="It's me smiling and waving"
-          className="background-image"
+          id="background-image"
         />
       </div>
 
