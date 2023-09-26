@@ -19,7 +19,7 @@ const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
       name: "Node JS",
       logo: "/icons/MERN/node-js-svgrepo-com.svg",
       description:
-        "JavaScript beyond the browser. I still feel somewhat like Danny-San painting fences and waxing cars in what I can do with it, but hey, the server's serving! Curious about Bun, which came out a week after I finished my project",
+        "JavaScript beyond the browser. I still feel somewhat like Danny-San painting fences and waxing cars in what I can do with it, but hey, the server's serving! Curious about Bun, which came out a week after I finished my bootcamp.",
     },
     {
       name: "Express JS",
