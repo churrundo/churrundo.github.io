@@ -1,13 +1,12 @@
-import React, { useRef } from "react";
+import React from "react";
 import "./styles.css";
+import ScrollDownIcon from "../../../components/ScrollDownIcon";
 
-const Header: React.FC = () => {
-  const aboutRef = useRef<HTMLDivElement>(null);
+interface HeaderProps {
+  scrollTo: () => void;
+}
 
-  const handleScrollToAbout = () => {
-    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
+const Header: React.FC<HeaderProps> = ({ scrollTo }) => {
   return (
     <header className="header-container">
       <div className="hero">
@@ -16,10 +15,8 @@ const Header: React.FC = () => {
         <p className="header-tagline">
           Full-Stack Web Developer | Intuition Driver | Perpetually Curious
         </p>
-        <button className="header-cta" onClick={handleScrollToAbout}>
-          Learn More
-        </button>
       </div>
+      <ScrollDownIcon scrollTo={scrollTo} />
     </header>
   );
 };

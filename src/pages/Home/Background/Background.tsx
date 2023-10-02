@@ -1,26 +1,68 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "./styles.css";
+import ScrollDownIcon from "../../../components/ScrollDownIcon";
 
-const Background: React.FC = () => {
+interface BackgroundProps {
+  scrollTo: () => void;
+}
+
+const Background = forwardRef<HTMLDivElement, BackgroundProps>((props, ref) => {
   return (
-    <section className="background-section">
+    <section ref={ref} className="background-section">
       <div className="background-image-container">
         <img
           src="./IMG_20230705_230300_255.jpg"
           alt="It's me smiling and waving"
-          className="background-image"
+          id="background-image"
         />
       </div>
 
       <div className="background-content">
-        <h2>About Me</h2>
-        <p>
-          A brief introduction about myself. Where I come from, my background in
-          web development, and some personal tidbits.
-        </p>
+        <div className="background-greeting">
+          <h2>Hi There!</h2>
+          <p>
+            I'm Juan Pablo, a 30-year-old from Mexico with a background in
+            MERN-stack Web Development and Psychology.
+          </p>
+        </div>
+        <div className="background-journey">
+          <h3>My Journey</h3>
+          <p>
+            After several years of struggling with addiction, I decided to
+            reboot my life in 2017 by getting into rehab. Right after that, I
+            studied Psychology, which allowed me to consolidate my recovery,
+            develop my emotional intelligence, and most importantly discover I
+            had undiagnosed ADHD. Finally, with some good hard work and some
+            more vocational recalibration, I decided to do a Web Development
+            bootcamp and move to Berlin.
+          </p>
+        </div>
+        <div className="background-blend">
+          <h3>The Blend</h3>
+          <p>
+            Having experienced life's lows and the transformative power of
+            self-awareness and determination, I bring empathy and a user-centric
+            approach to my projects. I understand the importance of
+            accessibility, intuitive design, and the overall human experience in
+            digital spaces. All of this, with a dash of methylphenidate, gets
+            you a driven, curious, gentle, handsome, and witty addition to your
+            team.
+          </p>
+        </div>
+        <div className="background-life">
+          <h3>Life Beyond Code</h3>
+          <p>
+            When I'm not optimizing my LinkedIn with ChatGPT or looking at
+            YouTube tutorials for obscure technologies I don't even know the use
+            cases of, I am usually reading one of my preferred bloggers, eating
+            with my gf at the next restaurant on our to-try list, scratching my
+            dog's belly, or curating memes and tiktoks.
+          </p>
+        </div>
       </div>
+      <ScrollDownIcon scrollTo={props.scrollTo} />
     </section>
   );
-};
+});
 
 export default Background;
