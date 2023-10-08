@@ -1,0 +1,71 @@
+/* styles.css */
+
+.contact-form-container form {
+    width: 100%;
+    max-width: 480px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding-right: 30px;
+}
+
+.contact-form-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contact-form-container input[type="email"],
+.contact-form-container textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+.contact-form-container input[type="email"]:focus,
+.contact-form-container textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.contact-form-container textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form-container ValidationError {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #d43f00;
+}
+
+.contact-form-container button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form-container button:hover {
+    background-color: #0056b3;
+}
+
+.contact-form-container button:disabled {
+    background-color: #b2d4ef;
+    cursor: not-allowed;
+}
