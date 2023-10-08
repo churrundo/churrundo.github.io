@@ -9,16 +9,34 @@ function ContactForm() {
   return (
     <div className="contact-form-container">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email Address</label>
-        <input id="email" type="email" name="email" />
+        <label htmlFor="email">Your Email Address</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="example@domain.com"
+          required
+        />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
-        <textarea id="message" name="message" />
+
+        <label htmlFor="message">Your Message</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Write your message here..."
+          required
+        />
         <ValidationError
           prefix="Message"
           field="message"
           errors={state.errors}
         />
-        <button type="submit" disabled={state.submitting}>
+
+        <button
+          type="submit"
+          disabled={state.submitting}
+          className="submit-button"
+        >
           Submit
         </button>
       </form>
