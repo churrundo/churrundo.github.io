@@ -9,7 +9,7 @@ function ContactForm() {
   return (
     <div className="contact-form-container">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Your Email Address</label>
+        <label htmlFor="email">Or send me an e-mail...</label>
         <input
           id="email"
           type="email"

@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef } from "react";
 import "./styles.css";
 import BackToTopIcon from "../../../components/BackToTopIcon";
 import ContactForm from "./ContactForm";
@@ -8,22 +8,13 @@ interface ContactProps {
 }
 
 const Contact = forwardRef<HTMLDivElement, ContactProps>((props, ref) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleOpenModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
   return (
     <section ref={ref} className="contact-section">
       <h3>Interested in collaborating? Let's get in touch!</h3>
       <div className="contact-section-content">
         <div className="contact-links">
           <button
-            className="btn"
+            className="contact-button"
             onClick={() =>
               window.open(
                 "https://www.linkedin.com/in/juan-pablo-maurer-developer/",
@@ -36,10 +27,10 @@ const Contact = forwardRef<HTMLDivElement, ContactProps>((props, ref) => {
               alt="LinkedIn"
               className="link-icon"
             />
-            Connect with me on LinkedIn
+            <span>Connect with me on LinkedIn</span>
           </button>
           <button
-            className="btn"
+            className="contact-button"
             onClick={() =>
               window.open("https://github.com/churrundo", "_blank")
             }
@@ -49,10 +40,10 @@ const Contact = forwardRef<HTMLDivElement, ContactProps>((props, ref) => {
               alt="GitHub"
               className="link-icon"
             />
-            Check out my GitHub
+            <span>Check out my GitHub</span>
           </button>
           <button
-            className="btn"
+            className="contact-button"
             onClick={() =>
               window.open(
                 "https://drive.google.com/file/d/1MqNI8ulqGVrhAxKVLgEP8tBmIZMRth5C/view?usp=sharing",
@@ -65,27 +56,10 @@ const Contact = forwardRef<HTMLDivElement, ContactProps>((props, ref) => {
               alt="Download CV"
               className="link-icon"
             />
-            Download my CV
+            <span>Download my CV</span>
           </button>
-          {isModalOpen && (
-          <div className="modal-overlay" onClick={handleCloseModal}>
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-              <button onClick={handleCloseModal} className="close-modal-button">
-                X
-              </button>
-              <ContactForm />
-            </div>
-          </div>
-        )}
-        <button className="btn" onClick={handleOpenModal}>
-          <img
-            src="/icons/envelope.svg"
-            alt="Contact Me"
-            className="link-icon"
-          />
-          Contact Me
-        </button>
-        </div>
+        </div>        
+        <ContactForm />
       </div>
 
       <BackToTopIcon scrollTo={props.scrollTo} />

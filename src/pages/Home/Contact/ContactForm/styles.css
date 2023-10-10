@@ -1,57 +1,63 @@
-/* Base styles for the contact form */
-form {
+.contact-form-container{
     width: 60%;
-    max-width: 500px; /* prevent the form from being too wide on large screens */
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #333; /* darker font color for better contrast */
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
-    font-size: 16px;
-    transition: border-color 0.3s, box-shadow 0.3s;
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-input:focus, textarea:focus {
-    border-color: #0077b5; /* highlight color when the field is focused */
-    box-shadow: 0 3px 8px rgba(0, 77, 181, 0.2); /* subtle glow effect */
-    outline: none; /* remove browser default outline */
+input:focus,
+textarea:focus {
+  border-color: #0077b5;
+  box-shadow: 0 3px 8px rgba(0, 77, 181, 0.2);
+  outline: none;
 }
 
 textarea {
-    resize: vertical;
-    min-height: 120px; /* slightly taller initial height for message field */
+  resize: vertical;
+  min-height: 120px;
 }
 
-button {
-    background: linear-gradient(135deg, #0077b5, #005582); /* subtle gradient */
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+.submit-button {
+  background: linear-gradient(135deg, #0077b5, #005582);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-button:hover {
-    background: linear-gradient(135deg, #005582, #003f66); /* gradient shift */
-    transform: translateY(-2px); /* subtle lift effect */
+.submit-button:hover {
+  background: linear-gradient(135deg, #005582, #003f66);
+  transform: translateY(-2px);
 }
 
-button:active {
-    transform: translateY(0); /* button presses down on click */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.submit-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
