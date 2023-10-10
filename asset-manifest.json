@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/churrundo.github.io/static/css/main.7fa05724.css",
+    "main.js": "/churrundo.github.io/static/js/main.992b3100.js",
+    "static/js/787.272c74b8.chunk.js": "/churrundo.github.io/static/js/787.272c74b8.chunk.js",
+    "index.html": "/churrundo.github.io/index.html",
+    "main.7fa05724.css.map": "/churrundo.github.io/static/css/main.7fa05724.css.map",
+    "main.992b3100.js.map": "/churrundo.github.io/static/js/main.992b3100.js.map",
+    "787.272c74b8.chunk.js.map": "/churrundo.github.io/static/js/787.272c74b8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7fa05724.css",
+    "static/js/main.992b3100.js"
+  ]
+}
