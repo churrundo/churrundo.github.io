@@ -2,7 +2,7 @@
   "name": "juan-pablo-maurer-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "churrundo.github.io/portfolio-website",
+  "homepage": "https://churrundo.github.io/portfolio-website",
   "dependencies": {
     "@formspree/react": "^2.5.1",
     "@testing-library/jest-dom": "^5.17.0",
