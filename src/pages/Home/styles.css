@@ -26,7 +26,7 @@
 }
 
 header {
-  min-height: calc(100vh - 69px);
+  min-height: 100vh; /* not accounting for navbar */
   flex-direction: column;
 }
 
