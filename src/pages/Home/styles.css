@@ -26,12 +26,12 @@
 }
 
 header {
-  height: calc(100vh - 69px);
+  min-height: calc(100vh - 69px);
   flex-direction: column;
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 header, section {
